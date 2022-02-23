@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
+import { TodosContext } from "../contexts/TodoContext";
 import { Button, Table } from "reactstrap";
 
-const TodoList = ({ todos, completeTodo, removeTodo }) => {
+const TodoList = () => {
+    const {todos,completeTodo,removeTodo} = useContext(TodosContext)
   return (
     <Table>
       <tbody>
